@@ -1,5 +1,5 @@
 STORM
-Drone synthesizer and video synth for the original PlayStation (PAL)
+Drone synthesizer and video synth for the original PlayStation (PAL and NTSC)
 HB-STORM-01
 
 STORM turns a PlayStation into a drone instrument. It plays one long,
@@ -14,15 +14,20 @@ composite video out to a projector.
 
 FILES
 -----
-storm.bin / storm.cue   disc image (burn it from the .cue)
+PAL/storm.bin, .cue     disc image for European consoles (50 Hz)
+NTSC/storm.bin, .cue    disc image for American and Japanese consoles (60 Hz)
 cover.png               front cover
+
+Burn the image from the .cue file. Both versions play and look the same.
 
 
 HOW TO RUN IT
 -------------
 - Real hardware: burn storm.cue to a CD-R at low speed and play it on a
-  PAL PlayStation that can boot burned discs (modchip or similar).
-- Emulator: open storm.cue in DuckStation or any PS1 emulator, PAL region.
+  PlayStation that can boot burned discs (modchip or similar). Use the
+  PAL version on a PAL console and TV, the NTSC version on an NTSC one.
+- Emulator: open storm.cue in DuckStation or any PS1 emulator. The region
+  is detected from the disc.
 - Two controllers. A DualShock with the analog LED on adds the sticks,
   but every function also works with digital pads.
 - Memory card in slot 1 to save your scenes (optional, 1 block).
@@ -163,7 +168,7 @@ beat. Under every knob a thin blue bar shows its moving value.
 
 TECH NOTES
 ----------
-- PAL, 320x256, 50 Hz.
+- PAL: 320x256 at 50 Hz. NTSC: 320x240 at 60 Hz.
 - The main voice is computed by the CPU at 22050 Hz and streamed to the
   sound chip; layers, bells, thump, wind and reverb run on the SPU.
 - Written in C with PSn00bSDK.
